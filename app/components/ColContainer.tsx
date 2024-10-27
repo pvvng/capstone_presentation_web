@@ -3,6 +3,7 @@
 import { useState } from "react";
 import MiriBogiContainer from "./type/MiriBogiContainer";
 import PostDivContainer from "./type/PosDivContainer";
+import PWAcontainer from "./type/PWAContainer";
 
 interface Propsype {
     color : string, 
@@ -18,6 +19,8 @@ export default function ColContainer({color, type} : Propsype){
             return <MiriBogiContainer />
         }else if (type === "2"){
             return <PostDivContainer />
+        }else if (type === "3"){
+            return <PWAcontainer />
         }
     }
 

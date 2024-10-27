@@ -12,7 +12,7 @@
 .box-container{
     margin: auto;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .c-black{

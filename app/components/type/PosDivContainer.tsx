@@ -13,23 +13,23 @@ export default function PostDivContainer(){
             <h2 className="fw-bold mt-3 mb-5">형태소 분석의 후처리</h2>
             <div className="bg-white p-3 c-black rounded text-start">
                 <div className="row row-center w-100" style={{margin : 'auto'}}>
-                    <div className="col-3">
-                        <img src="konlpy.png" width="100%" style={{borderRadius : 20}} />
+                    <div className="col-md-3 col-12 text-center">
+                        <img src="konlpy.png" width="100%" style={{maxWidth : 280}} />
                     </div>
-                    <div className="col-9 text-start">
-                        <p>형태소 분석을 위해 <b>Konlpy</b> 형태소 분석 파이썬 패키지 사용</p>
-                        <p>확실한 키워드를 추출하기 위해 다양한 분석기 테스트</p>
-                        <p>그 어떤 분석기도 저희가 제작 중인 유튜브 키워드 추출 분석기로는 <b>적합하지 않다</b>는 결론</p>
-                        <p>유튜브 댓글에 비문과 <b>예측 불가능한 변수</b>가 많기 때문</p>
+                    <div className="col-md-9 col-12 text-start">
+                        <li className="mb-2">형태소 분석을 위해 <b className="fs-5">Konlpy</b> 형태소 분석 파이썬 패키지 사용합니다.</li>
+                        <li className="mb-2">확실한 키워드를 추출하기 위해 다양한 분석기 테스트를 시행했습니다.</li>
+                        <li className="mb-2">그 어떤 분석기도 저희가 제작 중인 유튜브 키워드 추출 분석기로는 <b>적합하지 않다</b>는 결론을 얻었습니다.</li>
+                        <li className="mb-2">유튜브 댓글에 비문과 <b>예측 불가능한 변수</b>가 많기 때문입니다.</li>
                     </div>
                 </div>
             </div>
 
             <h4 className="mt-3 mb-3 fw-bold text-start">형태소 분석 실패 예시</h4>
             <div className="bg-white p-3 c-black rounded text-start">
-                <p>침착맨 =&gt; 침착(관형사) + 맨(명사)</p>
-                <p>이나영 =&gt; 이(수사) + 나영(명사)</p>
-                <p>미라클베리 =&gt; 미라클(명사) + 베리(명사)</p>
+                <h5>침착맨 =&gt; 침착(관형사) + 맨(명사)</h5>
+                <h5>이나영 =&gt; 이(수사) + 나영(명사)</h5>
+                <h5>미라클베리 =&gt; 미라클(명사) + 베리(명사)</h5>
                 <p>이외에도 수많은 경우가 존재</p>
             </div>
 
@@ -62,11 +62,11 @@ export default function PostDivContainer(){
 
             <h4 className="mt-3 mb-3 fw-bold text-start">특이 패턴</h4>
             <div className="bg-white p-3 c-black rounded text-start">
-                <h4 className="mb-3">Any Pos + <span style={{background : '#FF6666'}}>Noun</span></h4>
-                <h4 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + Any Pos</h4> 
-                <h4 className="mb-3">Any Pos + <span style={{background : '#FF6666'}}>Noun</span> + Any Pos</h4>
-                <h4 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + Any Pos + Noun</h4>
-                <h4 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + <span style={{background : '#FF6666'}}>Noun</span> </h4>
+                <h5 className="mb-3">Any Pos + <span style={{background : '#FF6666'}}>Noun</span></h5>
+                <h5 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + Any Pos</h5> 
+                <h5 className="mb-3">Any Pos + <span style={{background : '#FF6666'}}>Noun</span> + Any Pos</h5>
+                <h5 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + Any Pos + Noun</h5>
+                <h5 className="mb-3"><span style={{background : '#FF6666'}}>Noun</span> + <span style={{background : '#FF6666'}}>Noun</span> </h5>
                 <p className="m-0">* 여기서 Any Pos는 Josa, Verb를 제외한 모든 품사입니다.</p>
             </div>
             
@@ -74,7 +74,7 @@ export default function PostDivContainer(){
             <div className="bg-white p-3 c-black rounded text-start" onDoubleClick={() => {
                 setNineBgColor(["black", "#FF6666"])
             }}>
-                <h5 className="fw-bold mb-4">“안녕하세요 디바제시카님 저는 선플달기 활동을 하고 있는 학생입니다.”</h5>
+                <h5 className="fw-bold">“안녕하세요 디바제시카님 저는 선플달기 활동을 하고 있는 학생입니다.”</h5>
                 <div style={{transition : 'all 1s'}}>
                     <p><span style={{background : nineBgColor[0]}}>(안녕하세요, Adjective)</span></p>
                     <p><span style={{background : nineBgColor[1]}}>(디바, Noun), (제시카, Noun),</span> <span style={{background : nineBgColor[0]}}>(님, Suffix)</span></p>
@@ -86,6 +86,7 @@ export default function PostDivContainer(){
                     <p><span style={{background : nineBgColor[1]}}>(학생, Noun), (입니다, Adjective)</span></p>
                     <p><span style={{background : nineBgColor[0]}}>(., Punctuation)</span></p>
                 </div>
+                <p className="fst-italic" style={{color : 'grey'}}>(더블클릭하시면 키워드가 어떻게 추출되는지 알 수 있습니다.)</p>
                 <div className="c-black mb-3">
                     <h5>최종적으로 추출된 키워드</h5>
                     <p className="mt-3 fw-bold">디바제시카, 저, 선플달기, 활동, 학생입니다</p>

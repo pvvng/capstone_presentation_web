@@ -10,7 +10,7 @@ export default function PWAcontainer(){
                     <p>웹 앱과 네이티브 앱의 장점을 모두 제공하는 진보된 형태의 웹 애플리케이션 개발</p>
                 </div>
             </div>
-            <div className="p-3 mt-5">
+            <div className="mt-5">
                 <h4 className="mb-3 fw-bold text-start">웹앱의 장점</h4>
                 <div className="bg-white p-3 c-black rounded text-start">
                     <h5 className="mb-3 fw-bold">뛰어난 접근성</h5>
